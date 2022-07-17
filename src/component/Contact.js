@@ -1,21 +1,21 @@
 import React, { useRef } from 'react';
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 import * as Yup from "yup";
 import { useFormik } from 'formik';
 
 const Contact = () => {
 
     const form = useRef();
-    const sendEmail = (e) => {
-        e.preventDefault();
-        emailjs.sendForm('service_1c7au0q', 'template_s39zp7k', form.current, 'fEMko0EatVnRj65o_')
-            .then((result) => {
-                console.log(result.text);
-            }, (error) => {
-                console.log(error.text);
-            });
-        e.target.reset();
-    };
+    // const sendEmail = (e) => {
+    //     e.preventDefault();
+    //     emailjs.sendForm('service_1c7au0q', 'template_s39zp7k', form.current, 'fEMko0EatVnRj65o_')
+    //         .then((result) => {
+    //             console.log(result.text);
+    //         }, (error) => {
+    //             console.log(error.text);
+    //         });
+    //     form.current.reset();
+    // };
 
     const formik = useFormik({
         initialValues: {
@@ -28,8 +28,16 @@ const Contact = () => {
             email: Yup.string().email().required("email required"),
             message: Yup.string().required("message required")
         }),
-        onSubmit: values => {
-            console.log(JSON.stringify(values, null, 2));
+        onSubmit: e => {
+            e.preventDefault();
+            emailjs.sendForm('service_1c7au0q', 'template_s39zp7k', form.current, 'fEMko0EatVnRj65o_')
+                .then((result) => {
+                    console.log(result.text);
+                }, (error) => {
+                    console.log(error.text);
+                });
+            e.target.reset();
+            console.log(e)
         },
     });
 
@@ -40,7 +48,7 @@ const Contact = () => {
             </div>
 
             <div className='formBox'>
-                <form ref={form} onSubmit={sendEmail} >
+                <form ref={form} onSubmit={formik.handleSubmit} >
                     <div class="input-group flex-nowrap">
                         <input type="text" name="name" class="form-control" placeholder="Enter username"
                             value={formik.values.name}

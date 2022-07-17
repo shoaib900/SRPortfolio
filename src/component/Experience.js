@@ -8,21 +8,21 @@ const Experience = () => {
 
                 <h3> <span className='span'>EXPERIENCE</span></h3>
                 <div style={{ textAlign: "start" }}>
-                    <h3>NIOFOX Software House Faisalabad <span>(Pakistan)</span></h3>
+                    <h3>NIOFOX Software House Faisalabad <span style={{ color: "green" }}>(Pakistan)</span></h3>
                     <p>2019 - 2021</p>
                     <p>Work experience as a software Engineer</p>
                 </div>
 
                 <div style={{ textAlign: "start" }}>
-                    <h3>Macro saor Software House Islamabad <span>(Pakistan)</span></h3>
-                    <p>2019 - 2021</p>
-                    <p>Work experience as a software Engineer</p>
+                    <h3>Macro saor Software House Islamabad <span style={{ color: "green" }}>(Pakistan)</span></h3>
+                    <p>2021 - 2022</p>
+                    <p>Work experience as a Senior Software Engineer</p>
                 </div>
 
                 <div style={{ textAlign: "start" }}>
-                    <h3>Mettlesol Software House Lahore <span>(Pakistan)</span></h3>
-                    <p>2019 - 2021</p>
-                    <p>Work experience as a software Engineer</p>
+                    <h3>Mettlesol Software House Lahore <span style={{ color: "green" }}>(Pakistan)</span></h3>
+                    <p>2022 - contineue</p>
+                    <p>Work experience as a Senior software Engineer</p>
                 </div>
 
             </div>
