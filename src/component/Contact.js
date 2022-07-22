@@ -20,7 +20,7 @@ const Contact = () => {
     const formik = useFormik({
         initialValues: {
             name: "",
-            email: '',
+            email: "",
             message: ""
         },
         validationSchema: Yup.object({
@@ -29,14 +29,6 @@ const Contact = () => {
             message: Yup.string().required("message required")
         }),
         onSubmit: e => {
-            e.preventDefault();
-            emailjs.sendForm('service_1c7au0q', 'template_s39zp7k', form.current, 'fEMko0EatVnRj65o_')
-                .then((result) => {
-                    console.log(result.text);
-                }, (error) => {
-                    console.log(error.text);
-                });
-            e.target.reset();
             console.log(e)
         },
     });
