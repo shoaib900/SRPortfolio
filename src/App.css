@@ -4,33 +4,40 @@
   box-sizing: border-box;
 }
 
-/* navbar */
+/* ////////////////////////////////////////////////////////////navbar */
 .bg {
   background-color: rgba(22, 22, 22, 0.9);
 }
 .logo {
-  background-color: rgb(235, 220, 88);
+  /* background-color: rgba(235, 220, 88, 0.3); */
+  color: rgb(241, 237, 237);
   border-radius: 20px;
   padding: 5px;
 }
 .nav-link {
   color: white;
+  font-family: Verdana;
 }
 li .nav-link:hover {
-  color: rgb(247, 171, 186);
+  color: rgb(245, 150, 9);
+}
+.nav-bg {
+  background-color: rgba(92, 73, 38, 0.95);
+  transition: ease-in-out 0.3s;
 }
 
-/* home */
+/* //////////////////////////////////////////////////////////////home */
 .home {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
       to bottom,
       rgba(250, 14, 14, 0.1),
       rgba(0, 162, 255, 0.1)
     ),
-    url("./img/download.jpg");
+    url("./img/download.jpg"); */
+  background-color: rgb(117, 92, 44);
   min-height: 600px;
   width: 100%;
   background-size: cover;
@@ -47,24 +54,10 @@ li .nav-link:hover {
   color: crimson;
 }
 
-@media only screen and (max-width: 600px) {
-  .home {
-    background-image: linear-gradient(
-        to bottom,
-        rgba(250, 14, 14, 0.1),
-        rgba(0, 162, 255, 0.1)
-      ),
-      url("./img/download1.jpg");
-    min-height: 300px;
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-}
-
-/* about  */
+/* ////////////////////////////////////////////////about  */
 .about {
   width: 100%;
+  margin-top: 20px;
   text-align: center;
 }
 .aboutus {
@@ -79,7 +72,7 @@ li .nav-link:hover {
   border-bottom: 3px solid red;
 }
 
-/* skill */
+/* /////////////////////////////////////////skill */
 .skill {
   width: 100%;
   text-align: center;
@@ -110,14 +103,39 @@ li .nav-link:hover {
   }
 }
 
-/* experience */
+.mcard {
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-around;
+}
+.card {
+  margin: 10px;
+  border: none;
+  min-width: 190px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.card:hover {
+  /* border: none; */
+  transform: scale(1.01);
+  z-index: 1;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: all 0.3s;
+  zoom: 1;
+}
+@media screen and (max-width: 780px) {
+  .mcard {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+/* ///////////////////////////////////experience */
 .experience {
   width: 100%;
   text-align: center;
 }
 
-/* contact
- */
+/* //////////////////////////////////contact*/
 .contact {
   display: flex;
   flex-direction: column;
@@ -140,7 +158,7 @@ li .nav-link:hover {
 .footer {
   text-align: center;
   line-height: 50px;
-  background-color: black;
+  background-color: rgba(92, 73, 38, 1);
   height: 50px;
   color: white;
 }

@@ -1,11 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Navbar = () => {
+    const [color, setColor] = useState(false)
+
+    const changeColor = () => {
+        if (window.scrollY >= 1) {
+            setColor(true)
+        } else {
+            setColor(false)
+        }
+    }
+
+    window.addEventListener("scroll", changeColor);
     return (
         <div>
-            <nav className="navbar-dark fixed-top navbar navbar-expand-lg bg">
+            <nav className={color ? "fixed-top nav-bg navbar navbar-expand-lg bg" : "fixed-top navbar navbar-light navbar-expand-lg"}>
                 <div className="container">
-                    <a className="navbar-brand logo" href="#">S R P</a>
+                    <a className="navbar-brand logo" href="#">SRP</a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
