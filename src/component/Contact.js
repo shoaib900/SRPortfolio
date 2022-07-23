@@ -2,12 +2,17 @@ import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import * as Yup from "yup";
 import { useFormik } from 'formik';
+import { NotificationContainer, NotificationManager } from 'react-notifications';
+import 'react-notifications/lib/notifications.css';
 
 const Contact = () => {
 
     const form = useRef();
+    const toast = () => {
+        NotificationManager.success('message sent successfully');
+    }
     const sendEmail = (e) => {
-        e.preventDefault();
+        // e.preventDefault();
         emailjs.sendForm('service_1c7au0q', 'template_s39zp7k', form.current, 'fEMko0EatVnRj65o_')
             .then((result) => {
                 console.log(result.text);
@@ -33,9 +38,10 @@ const Contact = () => {
         //     resetForm({ values: "" })
         // },
         onSubmit: (values, { resetForm }) => {
-            // sendEmail(values);
             console.log(values);
             resetForm({ values: "" })
+            sendEmail(values);
+            toast();
         }
     });
 
@@ -74,11 +80,12 @@ const Contact = () => {
                     {formik.touched.message && formik.errors.message ? <div style={{ color: "red", textAlign: "center" }}>{formik.errors.message}</div> : null}
 
                     <div class="d-grid gap-2">
-                        <button class="btn btn-primary" type="submit" >Send Message</button>
+                        <button class="btn btn-primary" type="submit">Send Message</button>
                     </div>
 
                 </form>
             </div>
+            <NotificationContainer />
 
         </div>
     )
