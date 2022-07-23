@@ -4,7 +4,7 @@ import Typical from 'react-typical'
 const Home = () => {
     return (
         <div>
-            <div className="home">
+            <div className="home" id="home">
                 <div className="boxname">
                     <h1>HI!</h1>
                     <h1>I am Shoaib Raza from <span style={{ color: "lightgreen", fontWeight: "bolder" }}>PAKISTAN</span> </h1>
