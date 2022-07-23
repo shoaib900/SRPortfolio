@@ -5,6 +5,9 @@
 }
 
 /* ////////////////////////////////////////////////////////////navbar */
+.navbar-toggler-icon {
+  background-image: var(--bs-navbar-toggler-icon-bg);
+}
 .bg {
   background-color: rgba(22, 22, 22, 0.9);
 }
@@ -25,7 +28,6 @@ li .nav-link:hover {
   background-color: rgba(92, 73, 38, 0.95);
   transition: ease-in-out 0.3s;
 }
-
 /* //////////////////////////////////////////////////////////////home */
 .home {
   display: flex;
@@ -37,14 +39,23 @@ li .nav-link:hover {
       rgba(0, 162, 255, 0.1)
     ),
     url("./img/download.jpg"); */
-  background-color: rgb(117, 92, 44);
+  /* background: linear-gradient(rgba(247, 171, 9, 0.6), rgba(247, 171, 9, 0.6)),
+    url("./img/hjkl.png") fixed center center; */
+  /* background: url("./img/download.jpg") repeat fixed 100%; */
+  background-color: rgb(107, 85, 45);
   min-height: 600px;
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
 }
+@media only screen and (max-width: 700px) {
+  .home {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
 .boxname {
-  background-color: rgba(47, 47, 48, 0.8);
+  /* background-color: rgba(47, 47, 48, 0.5); */
   color: rgb(247, 248, 247);
   padding: 5px;
   margin: 10px;
@@ -53,7 +64,26 @@ li .nav-link:hover {
 .typical {
   color: crimson;
 }
-
+.imgHover {
+  perspective: 1000px;
+}
+.imgHover:hover {
+  transform: rotateY(45deg);
+  transform-origin: bottom;
+  transform-style: preserve-3d;
+  transition: all 0.5s;
+}
+.imgHover::after {
+  content: "";
+  position: relative;
+  left: 0;
+  bottom: 0;
+  background: inherit;
+  background-size: cover, cover;
+  background-position: bottom;
+  transform: rotateX(90deg);
+  transform-origin: bottom;
+}
 /* ////////////////////////////////////////////////about  */
 .about {
   width: 100%;
@@ -111,7 +141,7 @@ li .nav-link:hover {
 .card {
   margin: 10px;
   border: none;
-  min-width: 190px;
+  min-width: 170px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 .card:hover {
@@ -122,12 +152,34 @@ li .nav-link:hover {
   transition: all 0.3s;
   zoom: 1;
 }
-@media screen and (max-width: 780px) {
+@media only screen and (max-width: 780px) {
   .mcard {
     display: flex;
     flex-wrap: wrap;
   }
 }
+
+/* ////////////////////////////////////portfolio */
+.portfolio {
+  width: 100%;
+  text-align: center;
+  /* background-color: aquamarine; */
+}
+@media only screen and (min-width: 580px) {
+  .port {
+    margin: 5px;
+    height: 200px;
+  }
+}
+@media only screen and (max-width: 580px) {
+  .port {
+    margin: 5px;
+    width: 300px;
+  }
+}
+/* .designPortfolio {
+  padding: 5px;
+} */
 
 /* ///////////////////////////////////experience */
 .experience {

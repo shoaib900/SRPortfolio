@@ -7,7 +7,7 @@ const Home = () => {
             <div className="home">
                 <div className="boxname">
                     <h1>HI!</h1>
-                    <h1>I am Shoaib Raza from <span style={{ color: "green", fontWeight: "bolder" }}>PAKISTAN</span> </h1>
+                    <h1>I am Shoaib Raza from <span style={{ color: "lightgreen", fontWeight: "bolder" }}>PAKISTAN</span> </h1>
                     <h2>I am <Typical className="typical"
                         steps={['Web Developer', 1000,
                             'App Developer!', 1000,
@@ -16,6 +16,9 @@ const Home = () => {
                         loop={Infinity}
                         wrapper="b"
                     /></h2>
+                </div>
+                <img className="imgHover" src={require("../img/hi.png")} alt="" height={190} />
+                <div>
                 </div>
 
 

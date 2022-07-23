@@ -6,16 +6,16 @@ import { useFormik } from 'formik';
 const Contact = () => {
 
     const form = useRef();
-    // const sendEmail = (e) => {
-    //     e.preventDefault();
-    //     emailjs.sendForm('service_1c7au0q', 'template_s39zp7k', form.current, 'fEMko0EatVnRj65o_')
-    //         .then((result) => {
-    //             console.log(result.text);
-    //         }, (error) => {
-    //             console.log(error.text);
-    //         });
-    //     form.current.reset();
-    // };
+    const sendEmail = (e) => {
+        e.preventDefault();
+        emailjs.sendForm('service_1c7au0q', 'template_s39zp7k', form.current, 'fEMko0EatVnRj65o_')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+        form.current.reset();
+    };
 
     const formik = useFormik({
         initialValues: {
@@ -28,9 +28,15 @@ const Contact = () => {
             email: Yup.string().email().required("email required"),
             message: Yup.string().required("message required")
         }),
-        onSubmit: e => {
-            console.log(e)
-        },
+        // onSubmit: (values, { resetForm }) => {
+        //     console.log("Hi :", values)
+        //     resetForm({ values: "" })
+        // },
+        onSubmit: (values, { resetForm }) => {
+            // sendEmail(values);
+            console.log(values);
+            resetForm({ values: "" })
+        }
     });
 
     return (

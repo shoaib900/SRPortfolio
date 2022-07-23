@@ -35,6 +35,9 @@ const Navbar = () => {
                                 <a className="nav-link " aria-current="page" href="#skill">Skill</a>
                             </li>
                             <li className="nav-item">
+                                <a className="nav-link " aria-current="page" href="#portfolio">Portfolio</a>
+                            </li>
+                            <li className="nav-item">
                                 <a className="nav-link " aria-current="page" href="#contact">Contact</a>
                             </li>
 
