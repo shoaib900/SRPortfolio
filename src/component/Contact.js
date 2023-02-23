@@ -48,11 +48,19 @@ const Contact = () => {
     return (
         <div className='container' id='contact'>
             <div className='contact'>
-                <h1> <span className='span'>Contact</span> </h1>
+                {/* <h1> <span className='span'>Contact</span> </h1> */}
+                <div class="page-header-wrapper">
+                    <div class="container">
+                        <div class="page-header text-center animated wow fadeInUp" data-wow-delay="0.3s">
+                            <h2>CONTACT</h2>
+                            <div class="devider"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div className='formBox'>
-                <form ref={form} onSubmit={formik.handleSubmit} >
+                <form ref={form} onSubmit={formik.handleSubmit} className="card animated wow animate__flipInX" data-wow-delay="0.3s" >
                     <div class="input-group flex-nowrap">
                         <input type="text" name="name" class="form-control" placeholder="Enter username"
                             value={formik.values.name}
