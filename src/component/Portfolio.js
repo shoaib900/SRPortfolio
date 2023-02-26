@@ -2,10 +2,10 @@ import React from "react";
 import img1 from "../img/p1.png";
 import img2 from "../img/p2.png";
 import img3 from "../img/p3.png";
-import img4 from "../img/and.PNG";
+import img4 from "../img/storifyme.png";
 import img5 from "../img/we.PNG";
 import img6 from "../img/nns.png";
-import img7 from "../img/storifyme.png";
+import img7 from "../img/and.PNG";
 
 const Portfolio = () => {
   return (
@@ -50,8 +50,8 @@ const Portfolio = () => {
             </a>
           </li>
           <li className="animated wow fadeInRight" data-wow-delay="0.3s">
-            <a href="#">
-              <img className="port" src={img4} alt="" />
+            <a target="_blank" href="https://shoaib900.github.io/storifyme/">
+              <img className="port" title="just sample" src={img4} alt="" />
             </a>
           </li>
           <li className="animated wow fadeInRight" data-wow-delay="0.3s">
@@ -65,10 +65,11 @@ const Portfolio = () => {
             </a>
           </li>
           <li className="animated wow fadeInRight" data-wow-delay="0.3s">
-            <a target="_blank" href="https://www.storifyme.com/">
+            <a href="#">
               <img className="port" src={img7} alt="" />
             </a>
           </li>
+
 
         </ul>
       </div>
