@@ -7,7 +7,7 @@ const Home = () => {
             <div className="home" id="home">
                 <div className="boxname">
                     <h1>Hi!</h1>
-                    <h1>I am Shoaib Raza from <span style={{ color: "green", fontWeight: "bolder" }}>PAKISTAN</span> </h1>
+                    <h1>I am Shoaib Raza from <span style={{ color: "rgb(228, 25, 55)", fontWeight: "bolder",textDecoration:"underline" }}>PAKISTAN</span> </h1>
                     <h2>I am <Typical className="typical"
                         steps={['Web Developer', 1000,
                             'App Developer!', 1000,

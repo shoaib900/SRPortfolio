@@ -19,21 +19,18 @@ const Experience = () => {
                 </div>
 
                 <div style={{ textAlign: "start" }} class="animated wow animate__backInLeft" data-wow-delay="0.3s">
-                    <h3>GamicaCloud Software House Faisalabad <span style={{ color: "green" }}>(Pakistan)</span></h3>
-                    <p>2019 - 2021</p>
-                    <p>Work experience as a software Engineer</p>
+                    <h3>GamicaCloud Software House Faisalabad <span style={{ fontWeight:"bolder"}}>(Pakistan)</span></h3>
+                    <p> <b>2019 - 2021:</b> Work experience as a software Engineer</p>
                 </div>
 
                 <div  style={{ textAlign: "start" }} class="animated wow animate__backInRight" data-wow-delay="0.3s">
-                    <h3>Macro saor Software House Islamabad <span style={{ color: "green" }}>(Pakistan)</span></h3>
-                    <p>2021 - 2022</p>
-                    <p>Work experience as a Senior Software Engineer</p>
+                    <h3>Macro saor Software House Islamabad <span style={{ fontWeight:"bolder"}}>(Pakistan)</span></h3>
+                    <p> <b>2021 - 2022:</b> Work experience as a Senior Software Engineer </p>
                 </div>
 
                 <div  style={{ textAlign: "start" }} class="animated wow animate__backInLeft" data-wow-delay="0.3s">
-                    <h3>Mettlesol Software House Lahore <span style={{ color: "green" }}>(Pakistan)</span></h3>
-                    <p>2022 - contineue</p>
-                    <p>Work experience as a Senior software Engineer</p>
+                    <h3>Mettlesol Software House Lahore <span style={{ fontWeight:"bolder"}}>(Pakistan)</span></h3>
+                    <p><b>2022 - contineue:</b> Work experience as a Senior software Engineer</p>
                 </div>
 
             </div>

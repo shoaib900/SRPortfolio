@@ -27,8 +27,7 @@ const Skill = () => {
               <img src={img1} alt="" height={50} />
               <h2>web Development</h2>
               <p className="card-text">
-                With supporting text below as a natural lead-in to additional
-                content.
+                Working on web Development in multiple languages like HTML CSS and Javascript and some frameworks
               </p>
             </div>
           </div>
@@ -37,8 +36,7 @@ const Skill = () => {
               <img src={img2} alt="" height={50} />
               <h2>UI/UX Design</h2>
               <p className="card-text">
-                With supporting text below as a natural lead-in to additional
-                content.
+                Making UI/UX design in figma, XD, PSD and many more.
               </p>
             </div>
           </div>
@@ -47,8 +45,7 @@ const Skill = () => {
               <img src={img3} alt="" height={50} />
               <h2>Adobe Photoshop</h2>
               <p className="card-text">
-                With supporting text below as a natural lead-in to additional
-                content.
+                 Making LOGO design in PSD file and make png or webp file with light wieght size of image.
               </p>
             </div>
           </div>
@@ -57,8 +54,7 @@ const Skill = () => {
               <img src={img4} alt="" height={50} />
               <h2>android Development</h2>
               <p className="card-text">
-                With supporting text below as a natural lead-in to additional
-                content.
+                Making android ios app in React native languages.
               </p>
             </div>
           </div>
