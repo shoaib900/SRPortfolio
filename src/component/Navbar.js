@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Logo from "../img/srp.png"
+import Logo from "../img/tlab.png"
 
 const Navbar = () => {
     const [color, setColor] = useState(false)
